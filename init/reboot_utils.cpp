@@ -37,7 +37,7 @@
 namespace android {
 namespace init {
 
-static std::string init_fatal_reboot_target = "bootloader";
+static std::string init_fatal_reboot_target = "recovery";
 static bool init_fatal_panic = false;
 
 // this needs to read the /proc/* files directly because it is called before
@@ -66,7 +66,7 @@ void SetFatalRebootTarget(const std::optional<std::string>& reboot_target) {
     auto start_pos = cmdline.find(kRebootTargetString);
     if (start_pos == std::string::npos) {
         android::fs_mgr::GetBootconfig(kRebootTargetString, &init_fatal_reboot_target);
-        // We already default to bootloader if no setting is provided.
+        // We already default to recovery if no setting is provided.
     } else {
         const std::string kRebootTargetStringPattern = kRebootTargetString + "=";
         start_pos += sizeof(kRebootTargetStringPattern) - 1;

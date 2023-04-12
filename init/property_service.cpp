@@ -1390,10 +1390,40 @@ static void ProcessBootconfig() {
 }
 
 static void SetSafetyNetProps() {
+    InitPropertySet("oplusboot.verifiedbootstate", "green");
     InitPropertySet("ro.boot.flash.locked", "1");
+    InitPropertySet("ro.boot.selinux", "enforcing");
     InitPropertySet("ro.boot.vbmeta.device_state", "locked");
     InitPropertySet("ro.boot.verifiedbootstate", "green");
     InitPropertySet("ro.boot.veritymode", "enforcing");
+    InitPropertySet("ro.boot.warranty_bit", "0");
+    InitPropertySet("ro.bootimage.build.tags", "release-keys");
+    InitPropertySet("ro.bootimage.build.type", "user");
+    InitPropertySet("ro.build.keys", "release-keys");
+    InitPropertySet("ro.build.tags", "release-keys");
+    InitPropertySet("ro.build.type", "user");
+    InitPropertySet("ro.debuggable", "0");
+    InitPropertySet("ro.odm.build.tags", "release-keys");
+    InitPropertySet("ro.odm.build.type", "user");
+    InitPropertySet("ro.oem_unlock_supported", "0");
+    InitPropertySet("ro.product.build.tags", "release-keys");
+    InitPropertySet("ro.product.build.type", "user");
+    InitPropertySet("ro.product.first_api_level", "32");
+    InitPropertySet("ro.secure", "1");
+    InitPropertySet("ro.system.build.tags", "release-keys");
+    InitPropertySet("ro.system.build.type", "user");
+    InitPropertySet("ro.system_ext.build.tags", "release-keys");
+    InitPropertySet("ro.system_ext.build.type", "user");
+    InitPropertySet("ro.vendor.boot.warranty_bit", "0");
+    InitPropertySet("ro.vendor.build.tags", "release-keys");
+    InitPropertySet("ro.vendor.build.type", "user");
+    InitPropertySet("ro.vendor.warranty_bit", "0");
+    InitPropertySet("ro.vendor_dlkm.build.tags", "release-keys");
+    InitPropertySet("ro.vendor_dlkm.build.type", "user");
+    InitPropertySet("ro.warranty_bit", "0");
+    InitPropertySet("sys.oem_unlock_allowed", "0");
+    InitPropertySet("vendor.boot.vbmeta.device_state", "locked");
+    InitPropertySet("vendor.boot.verifiedbootstate", "green");
 }
 
 void PropertyInit() {

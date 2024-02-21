@@ -87,16 +87,6 @@
   "Profiles": [
     {
       "Name": "HighEnergySaving",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "background"
-          }
-        }
-      ]
     },
     {
       "Name": "Frozen",
@@ -126,42 +116,12 @@
     },
     {
       "Name": "NormalPerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "system"
-          }
-        }
-      ]
     },
     {
       "Name": "ServicePerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "system-background"
-          }
-        }
-      ]
     },
     {
       "Name": "HighPerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "foreground"
-          }
-        }
-      ]
     },
     {
       "Name": "HighPerformanceWI",
@@ -178,29 +138,9 @@
     },
     {
       "Name": "MaxPerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "top-app"
-          }
-        }
-      ]
     },
     {
       "Name": "RealtimePerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "rt"
-          }
-        }
-      ]
     },
     {
       "Name": "RealTimeInputScheduling",
@@ -217,42 +157,12 @@
     },
     {
       "Name": "CameraServicePerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "camera-daemon"
-          }
-        }
-      ]
     },
     {
       "Name": "NNApiHALPerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "nnapi-hal"
-          }
-        }
-      ]
     },
     {
       "Name": "Dex2oatPerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpu",
-            "Path": "dex2oat"
-          }
-        }
-      ]
     },
     {
       "Name": "CpuPolicySpread",

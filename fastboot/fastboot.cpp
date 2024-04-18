@@ -1341,7 +1341,7 @@ static std::string repack_ramdisk(const char* pname, struct fastboot_buffer* buf
 
 static void do_flash(const char* pname, const char* fname) {
     verbose("Do flash %s %s", pname, fname);
-    struct fastboot_buffer buf;
+    struct fastboot_buffer buf{};
 
     if (!load_buf(fname, &buf)) {
         die("cannot load '%s': %s", fname, strerror(errno));
